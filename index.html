@@ -86,7 +86,7 @@
                 const size = 80;
                 const petals = 5;
                 
-                // Draw petals
+                
                 ctx.beginPath();
                 ctx.moveTo(centerX, centerY);
                 
@@ -101,7 +101,7 @@
                 ctx.fillStyle = '#d23b68';
                 ctx.fill();
                 
-                // Draw center
+                
                 ctx.beginPath();
                 ctx.arc(centerX, centerY, 12, 0, 2 * Math.PI);
                 ctx.fillStyle = '#ffcd3c';
@@ -213,13 +213,13 @@
                         drawLeaf(200, 280, -150);
                         drawRose();
                         
-                        // Draw petals
+                        
                         for (let petal of petals) {
                             ctx.save();
                             ctx.translate(petal.x, petal.y);
                             ctx.rotate(petal.rotation * Math.PI / 180);
                             
-                            // Draw a petal
+                            
                             ctx.beginPath();
                             ctx.ellipse(0, 0, petal.size, petal.size * 1.5, 0, 0, 2 * Math.PI);
                             ctx.fillStyle = 'rgba(210, 59, 104, 0.3)';
@@ -232,7 +232,7 @@
                             petal.y += petal.speedY;
                             petal.rotation += 0.5;
                             
-                            // Reset if out of bounds
+                            
                             if (petal.y > canvas.height) {
                                 petal.y = -petal.size;
                                 petal.x = Math.random() * canvas.width;
